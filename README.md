@@ -1,2 +1,0 @@
-# corner
-Created with CodeSandbox
