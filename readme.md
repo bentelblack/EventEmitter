@@ -23,17 +23,19 @@
 ### 使用 EventEmitter
 
 1.  实例化 EventEmitter
-    `const event = new EventEmitter`
+    ```
+    const event = new EventEmitter
+    ```
 2.  使用
     ```
-        const logText = function (text = '日志') {
-            console.log(text)
-        }
-        event.$on('log', logText)
-        event.$emit('log') // '日志'
-        event.$remove('log')
-        event.$emit('log') // 该事件不存在
-        event.$once('log2', logText)
-        event.$emit('log2') // 日志
-        event.$emit('log2') // 该事件不存在
+    const logText = function (text = '日志') {
+        console.log(text)
+    }
+    event.$on('log', logText)
+    event.$emit('log') // '日志'
+    event.$remove('log')
+    event.$emit('log') // 该事件不存在
+    event.$once('log2', logText)
+    event.$emit('log2') // 日志
+    event.$emit('log2') // 该事件不存在
     ```
